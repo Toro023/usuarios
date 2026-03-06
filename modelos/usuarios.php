@@ -3,13 +3,12 @@ include_once("connection.php");
 
 class Usuarios{
     /* atributos */
-    private $id;
+    private $idusuarios;
     private $nombres;
     private $apellidos;
     private $cedula;
     private $usuario;
     private $password;
-
     private $con;
 
     /* metodos */
