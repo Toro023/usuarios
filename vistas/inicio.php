@@ -1,4 +1,7 @@
-<h1>MODULO DE INICIO</h1>
+<?php
+    $controlador = new Controlador();
+    $resultado = $controlador->index();
+?>
 
 <table border="1">
     <tr>
