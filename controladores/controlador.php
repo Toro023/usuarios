@@ -1,6 +1,5 @@
 <?php
 include_once("modelos/usuarios.php");
-
 class ControladorUsuarios{
     private $usuario;
 

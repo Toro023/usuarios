@@ -33,5 +33,5 @@
 
     } // Finalizacion de la clase conexion
 
-    $miConexion = new Conexion(); 
+    /* $miConexion = new Conexion(); */ 
 ?>

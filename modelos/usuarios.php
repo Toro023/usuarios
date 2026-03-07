@@ -19,7 +19,6 @@ class Usuarios{
     public function listar(){
         $sql = "SELECT * FROM usuarios";
         $resultado = $this->con->consultaRetorno($sql);
-        /* var_dumb($resultado); */
         return $resultado;
     }
 
