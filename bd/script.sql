@@ -1,5 +1,5 @@
 CREATE TABLE usuarios (
-  idusuario int NOT NULL AUTO_INCREMENT,
+  idUsuario int NOT NULL AUTO_INCREMENT,
   nombres varchar(45) NOT NULL,
   apellidos varchar(45) DEFAULT NULL,
   cedula varchar(45) NOT NULL,
