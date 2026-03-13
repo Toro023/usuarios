@@ -3,7 +3,7 @@
     $controlador = new ControladorUsuarios();
    
     if (isset($_GET["id"]))
-        $registro = $controlador->consultar($_GET["id"])
+        $registro = $controlador->ctrConsultar($_GET["id"])
 ?>
 
 <h1>MODULO CONSULTAR</h1>

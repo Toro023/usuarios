@@ -1,11 +1,11 @@
 <?php
 $controlador = new ControladorUsuarios();
 if (isset($_GET["id"])) { // isset se refiere a si existe el dato id
-    $registro = $controlador->consultar($_GET["id"]);
+    $registro = $controlador->ctrConsultar($_GET["id"]);
 }
 
 if (isset($_POST["editarRegistro"])) {
-    $controlador->editar($_POST["id"], $_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
+    $controlador->ctrEditar($_POST["id"], $_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
     header("Location: index.php");
 }
 ?>

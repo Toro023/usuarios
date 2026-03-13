@@ -1,55 +1,55 @@
 <?php
-include_once("modelos/usuarios.php");
+include_once("modelos/modelo.usuarios.php");
 class ControladorUsuarios
 {
     private $usuario;
 
     public function __construct()
     {
-        $this->usuario = new Usuarios();
+        $this->usuario = new mdlUsuarios();
     }
 
-    public function listar()
+    public function ctrListar()
     {
-        $listar = $this->usuario->listar();
+        $listar = $this->usuario->mdlListar();
         return $listar;
     }
 
-    public function crear($cedula, $nombre, $apellidos, $usuario, $password)
+    public function ctrCrear($cedula, $nombre, $apellidos, $usuario, $password)
     {
-        $this->usuario->set("cedula", $cedula);
-        $this->usuario->set("nombres", $nombre);
-        $this->usuario->set("apellidos", $apellidos);
-        $this->usuario->set("usuario", $usuario);
-        $this->usuario->set("password", $password);
+        $this->usuario->mdlSet("cedula", $cedula);
+        $this->usuario->mdlSet("nombres", $nombre);
+        $this->usuario->mdlSet("apellidos", $apellidos);
+        $this->usuario->mdlSet("usuario", $usuario);
+        $this->usuario->mdlSet("password", $password);
 
-        $resultado = $this->usuario->crear();
+        $resultado = $this->usuario->mdlCrear();
         return $resultado;
     } // Fin del metodo crear
 
-    public function consultar($id)
+    public function ctrConsultar($id)
     {
-        $this->usuario->set("idUsuario", $id);
-        $registro = $this->usuario->consultar();
+        $this->usuario->mdlSet("idUsuario", $id);
+        $registro = $this->usuario->mdlConsultar();
         return $registro;
     } // Fin del metodo consultar
 
-    public function eliminar($id)
+    public function ctrEliminar($id)
     {
-        $this->usuario->set("idUsuario", $id);
-        $this->usuario->eliminar();
+        $this->usuario->mdlSet("idUsuario", $id);
+        $this->usuario->mdlEliminar();
     } // Fin del metodo eliminar
 
-    public function editar($id, $cedula, $nombre, $apellidos, $usuario, $password)
+    public function ctreditar($id, $cedula, $nombre, $apellidos, $usuario, $password)
     {
-        $this->usuario->set("idUsuario", $id);
-        $this->usuario->set("cedula", $cedula);
-        $this->usuario->set("nombres", $nombre);
-        $this->usuario->set("apellidos", $apellidos);
-        $this->usuario->set("usuario", $usuario);
-        $this->usuario->set("password", $password);
+        $this->usuario->mdlSet("idUsuario", $id);
+        $this->usuario->mdlSet("cedula", $cedula);
+        $this->usuario->mdlSet("nombres", $nombre);
+        $this->usuario->mdlSet("apellidos", $apellidos);
+        $this->usuario->mdlSet("usuario", $usuario);
+        $this->usuario->mdlSet("password", $password);
 
-        return $this->usuario->editar();
+        return $this->usuario->mdlEditar();
     } // Fin del metodo editar
 
 } // Fin de la clase

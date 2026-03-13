@@ -1,6 +1,6 @@
 <?php
 $controlador = new ControladorUsuarios();
-$resultado = $controlador->listar();
+$resultado = $controlador->ctrListar();
 ?>
 
 <table border="1">

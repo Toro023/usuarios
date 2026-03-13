@@ -2,11 +2,11 @@
 $controlador = new ControladorUsuarios();
 
 if (isset($_GET["id"])) {
-    $registro = $controlador->consultar($_GET["id"]);
+    $registro = $controlador->ctrConsultar($_GET["id"]);
 }
 
 if (isset($_POST["eliminarRegistro"])) {
-    $controlador->eliminar($_GET["id"]);
+    $controlador->ctrEliminar($_GET["id"]);
     header("Location: index.php");
 }
 ?>

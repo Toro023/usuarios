@@ -6,23 +6,23 @@ class Enrutador{
         switch($vista)
         {
             case "crear":
-                include_once("vistas/crear.php");
+                include_once("vistas/usuarios.crear.php");
                 break;
                 
             case "consultar":
-                include_once("vistas/consultar.php");
+                include_once("vistas/usuarios.consultar.php");
                 break;
 
             case "editar":
-                include_once("vistas/editar.php");
+                include_once("vistas/usuarios.editar.php");
                 break;
 
             case "eliminar":
-                include_once("vistas/eliminar.php");
+                include_once("vistas/usuarios.eliminar.php");
                 break;
 
             default:
-                include_once("vistas/error404.php");
+                include_once("vistas/usuarios.error404.php");
         }
     } // Fin de cargar vista
 
