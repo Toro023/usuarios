@@ -22,14 +22,14 @@ class Enrutador{
                 break;
 
             default:
-                include_once("vistas/usuarios.error404.php");
+                include_once("vistas/error404.php");
         }
     } // Fin de cargar vista
 
     public function validarVista($variable)
     {
         if (empty($variable)){
-            include_once("vistas/inicio.php");
+            include_once("vistas/usuarios.inicio.php");
 
         }else{
             return True;
