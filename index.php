@@ -18,6 +18,11 @@
         </ul>
     </nav>
     <?php
+        error_reporting(E_ALL ^ E_NOTICE);
+        if (!isset($_GET["cargar"])) {
+            $_GET["cargar"] = "";
+        }
+        $cargar = "";
         $enrutador = new Enrutador();
         if ($enrutador->validarVista($_GET['cargar'])) // Capturamos variable por get especificando cual
         {

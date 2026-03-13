@@ -49,8 +49,7 @@ class ControladorUsuarios
         $this->usuario->set("usuario", $usuario);
         $this->usuario->set("password", $password);
 
-        $resultado = $this->usuario->editar();
-        return $resultado;
+        return $this->usuario->editar();
     } // Fin del metodo editar
 
 } // Fin de la clase

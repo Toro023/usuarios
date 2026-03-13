@@ -16,9 +16,9 @@
             if(mysqli_errno($this->con)){
                 echo "Fallo en la conexion a $this->db";
             }
-            else{
+            /* else{
                 echo "La conexion a $this->db fue exitosa";
-            }
+            } */
 
         } // fin del constructor
 
