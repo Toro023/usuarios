@@ -39,7 +39,6 @@ class mdlUsuarios
         if ($filas == 0) {
             $sql = "INSERT INTO usuarios(nombres, apellidos, cedula, usuario, password) VALUES('$this->nombres',
              '$this->apellidos', '$this->cedula', '$this->usuario', '$this->password')";
-            echo $sql;
             $this->con->consultaSimple($sql);
             return true;
         } else {

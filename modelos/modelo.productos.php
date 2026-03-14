@@ -32,14 +32,13 @@ class mdlProductos
 
     public function mdlCrear()
     {
-        $sql2 = "SELECT * FROM productos WHERE idProducto='$this->idProducto'";
+        $sql2 = "SELECT * FROM productos WHERE nombre='$this->nombre'";
         
         $resultado = $this->con->consultaRetorno($sql2);
         $filas = mysqli_num_rows($resultado);
         if ($filas == 0) {
             $sql = "INSERT INTO productos(nombre, descripcion, precio, stock, categoria) VALUES('$this->nombre',
              '$this->descripcion', '$this->precio', '$this->stock', '$this->categoria')";
-            echo $sql;
             $this->con->consultaSimple($sql);
             return true;
         } else {
@@ -72,13 +71,13 @@ class mdlProductos
 
         $sql = "UPDATE productos SET nombre='$this->nombre', descripcion='$this->descripcion',
 
-         precio='$this->precio', stock='$this->stock' WHERE idProducto='$this->idProducto'";
+         precio='$this->precio', stock='$this->stock', categoria='$this->categoria' WHERE idProducto='$this->idProducto'";
         
         $this->con->consultaSimple($sql);
         
     }
 
-}// Fin de la clase usuarios
+}// Fin de la clase productos
 
 $miProducto = new mdlProductos();
 $miProducto->mdlListar();

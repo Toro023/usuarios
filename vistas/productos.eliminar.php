@@ -5,9 +5,9 @@ if (isset($_GET["id"])) {
     $registro = $controlador->ctrConsultar($_GET["id"]);
 }
 
-if (isset($_POST["eliminarRegistro"])) {
+if (isset($_POST["eliminarRegistroProductos"])) {
     $controlador->ctrEliminar($_GET["id"]);
-    header("Location: index.php");
+    header("Location: ?cargar=inicio_productos");
 }
 ?>
 
@@ -44,7 +44,7 @@ if (isset($_POST["eliminarRegistro"])) {
                     <?php echo $registro['categoria'] ?>
                 </td>
                 <td>
-                    <input type="submit" name="eliminarRegistro" value="Eliminar">
+                    <input type="submit" name="eliminarRegistroProductos" value="Eliminar">
                 </td>
             </tr>
         </tbody>

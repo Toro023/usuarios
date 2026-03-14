@@ -26,9 +26,9 @@ $resultado = $controlador->ctrListar();
             echo "<td>" . $fila['usuario'] . "</td>";
             echo "<td>" . $fila['password'] . "</td>";
             echo "<td>
-            <a href='?cargar=consultar&id=" . $fila["idUsuario"] .
-                "'>|Consultar|</a><a href='?cargar=editar&id=" . $fila["idUsuario"] .
-                "'>Editar|</a><a href='?cargar=eliminar&id=" . $fila["idUsuario"] .
+            <a href='?cargar=consultar_usuario&id=" . $fila["idUsuario"] .
+                "'>|Consultar|</a><a href='?cargar=editar_usuario&id=" . $fila["idUsuario"] .
+                "'>Editar|</a><a href='?cargar=eliminar_usuario&id=" . $fila["idUsuario"] .
                 "'>Eliminar|</a>
             </td>";
             echo "</tr>";

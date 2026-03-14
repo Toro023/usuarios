@@ -16,12 +16,12 @@
     <label for="">Clave</label><br>
     <input type="text" name="password" required><br><br>
 
-    <input type="submit" name="enviarRegistro" value="Registrar">
+    <input type="submit" name="enviarRegistroUsuarios" value="Registrar">
 </form>
 
 <?php
 $controlador = new ControladorUsuarios();
-if (isset($_POST["enviarRegistro"])) {
+if (isset($_POST["enviarRegistroUsuarios"])) {
     // Metodo para crear el usuario
     $resultado = $controlador->ctrCrear($_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
     if ($resultado) {

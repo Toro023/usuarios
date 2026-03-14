@@ -26,9 +26,9 @@ $resultado = $controlador->ctrListar();
             echo "<td>" . $fila['stock'] . "</td>";
             echo "<td>" . $fila['categoria'] . "</td>";
             echo "<td>
-            <a href='?cargar=consultar&id=" . $fila["idProducto"] .
-                "'>|Consultar|</a><a href='?cargar=editar&id=" . $fila["idProducto"] .
-                "'>Editar|</a><a href='?cargar=eliminar&id=" . $fila["idProducto"] .
+            <a href='?cargar=consultar_producto&id=" . $fila["idProducto"] .
+                "'>|Consultar|</a><a href='?cargar=editar_producto&id=" . $fila["idProducto"] .
+                "'>Editar|</a><a href='?cargar=eliminar_producto&id=" . $fila["idProducto"] .
                 "'>Eliminar|</a>
             </td>";
             echo "</tr>";
