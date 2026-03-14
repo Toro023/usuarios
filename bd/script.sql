@@ -1,3 +1,5 @@
+/* Usuarios */
+
 CREATE TABLE usuarios (
   idUsuario int NOT NULL AUTO_INCREMENT,
   nombres varchar(45) NOT NULL,
@@ -60,3 +62,39 @@ INSERT INTO usuarios (nombres, apellidos, cedula, usuario, password) VALUES
 ('Elena','Aguilar','10000048','eaguilar','pass123'),
 ('Felipe','Montoya','10000049','fmontoya','pass123'),
 ('Diana','Arango','10000050','darango','pass123');
+
+
+/* Productos */
+
+CREATE TABLE productos (
+  idProducto INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  descripcion VARCHAR(100) DEFAULT NULL,
+  precio DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL,
+  categoria VARCHAR(45),
+  PRIMARY KEY (idProducto)
+);
+
+
+INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
+('Laptop HP', 'Laptop 14 pulgadas', 2500.00, 10, 'Tecnologia'),
+('Mouse Logitech', 'Mouse inalambrico', 45.50, 50, 'Tecnologia'),
+('Teclado Redragon', 'Teclado mecanico', 120.00, 30, 'Tecnologia'),
+('Monitor Samsung', 'Monitor 24 pulgadas', 650.00, 15, 'Tecnologia'),
+('Impresora Epson', 'Impresora multifuncional', 550.00, 12, 'Tecnologia'),
+('Silla Gamer', 'Silla ergonomica gamer', 800.00, 8, 'Muebles'),
+('Escritorio', 'Escritorio de madera', 400.00, 6, 'Muebles'),
+('Memoria USB', 'USB 64GB', 35.00, 100, 'Accesorios'),
+('Disco Duro', 'Disco duro 1TB', 320.00, 20, 'Tecnologia'),
+('Audifonos Sony', 'Audifonos bluetooth', 210.00, 25, 'Accesorios'),
+('Cargador Laptop', 'Cargador universal', 90.00, 40, 'Accesorios'),
+('Tablet Lenovo', 'Tablet 10 pulgadas', 900.00, 14, 'Tecnologia'),
+('Celular Samsung', 'Smartphone 128GB', 1800.00, 18, 'Tecnologia'),
+('Camara Web', 'Camara HD', 85.00, 22, 'Accesorios'),
+('Parlantes', 'Parlantes estereo', 150.00, 16, 'Accesorios'),
+('Router TP-Link', 'Router WiFi', 130.00, 28, 'Redes'),
+('Switch 8 Puertos', 'Switch ethernet', 95.00, 19, 'Redes'),
+('Cable HDMI', 'Cable HDMI 2 metros', 20.00, 70, 'Accesorios'),
+('Power Bank', 'Bateria externa 10000mAh', 75.00, 35, 'Accesorios'),
+('Smartwatch', 'Reloj inteligente', 300.00, 11, 'Tecnologia');

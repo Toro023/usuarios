@@ -1,5 +1,5 @@
 <?php
-    include_once("controladores/controlador.php");
+    include_once("controladores/productos.controlador.php");
     include_once("controladores/enrutador.php");
 ?>
 <!DOCTYPE html>
